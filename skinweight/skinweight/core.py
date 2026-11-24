@@ -1,11 +1,10 @@
-"""skinweight 核心 API（初始未实现）。"""
+"""skinweight 核心 API。
 
+历史的 :class:`SkinWeight` 权重限项/归一接口保留在
+:mod:`skinweight.weights` 中并在此重新导出；对偶四元数蒙皮的主实现见
+:mod:`skinweight.skinning`。
+"""
 
-class SkinWeight:
-    def limit(self, weights, max_infl=4):
-        """限项归一"""
-        raise NotImplementedError
+from .weights import SkinWeight
 
-    def normalize(self, weights):
-        """归一"""
-        raise NotImplementedError
+__all__ = ["SkinWeight"]
